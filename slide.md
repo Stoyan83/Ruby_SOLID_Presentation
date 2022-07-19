@@ -41,6 +41,7 @@ SOLID is an acronym that stands for five key design principles:
 
 ---
 -> ## Single Responsibility principle  <-
+
 *A class should have one, and only one, reason to change.*
 
 One class should serve only one purpose.
@@ -52,10 +53,9 @@ When a class serves multiple responsibilities,
 it should be made into a new class
 
 ```
-class SecondExample < Example
+class Example
     def info
-       super
-       puts "I promise real examples in a minute."
+        puts "Some real examples are coming soon."
     end
 end
 ```
