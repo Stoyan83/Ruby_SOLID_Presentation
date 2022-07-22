@@ -11,35 +11,32 @@
 # dependency injection violation
 
 class Book
-    attr_accessor :title, :author, :pages
+class Book
+  attr_accessor :title, :author, :pages
 
-    def initialize(title, author, pages)
-        @title = title
-        @author = author
-        @pages = pages
-    end
-
-    def info
-        "\"#{@title}\" with author #{@author} has #{@pages} pages."
-    end
-
-end
-
-
-class Printer
-
-    def formatter      
-      book = Book.new("The Green Mile", "Stephen King", 400)
-      result = ""
-      result += "---------------" + "\n"
-      result += book.title + "\n"
-      result += "---------------" + "\n"      
-      result += "By " + book.author + "\n"
-      result += "---------------"
-      return result      
-    end
+  def initialize(title, author, pages)
+    @title = title
+    @author = author
+    @pages = pages
   end
 
+  def info
+    "\"#{@title}\" with author #{@author} has #{@pages} pages."
+  end
+end
+
+class Printer
+  def formatter
+    book = Book.new("The Green Mile", "Stephen King", 400)
+    result = ""
+    result += "---------------" + "\n"
+    result += book.title + "\n"
+    result += "---------------" + "\n"
+    result += "By " + book.author + "\n"
+    result += "---------------"
+    return result
+  end
+end
 
 
 book_for_printing = Printer.new
@@ -50,37 +47,35 @@ puts book_for_printing.formatter
 # dependency inversion Solution
 
 # class Book
-#     attr_accessor :title, :author, :pages
+#   attr_accessor :title, :author, :pages
 
-#     def initialize(title, author, pages)
-#         @title = title
-#         @author = author
-#         @pages = pages
-#     end
+#   def initialize(title, author, pages)
+#     @title = title
+#     @author = author
+#     @pages = pages
+#   end
 
-#     def info
-#         "\"#{@title}\" with author #{@author} has #{@pages} pages."
-#     end
-
+#   def info
+#     "\"#{@title}\" with author #{@author} has #{@pages} pages."
+#   end
 # end
 
-
 # class Printer
-#     def initialize(book)
-#         @book = book
-#     end
-
-#     def formatter    
-      
-#       result = ""
-#       result += "------------------------------" + "\n"
-#       result += @book.title + "\n"
-#       result += "------------------------------" + "\n"      
-#       result += "By " + @book.author + "\n"
-#       result += "------------------------------"
-#       return result      
-#     end
+#   def initialize(book)
+#     @book = book
 #   end
+
+#   def formatter
+#     result = ""
+#     result += "------------------------------" + "\n"
+#     result += @book.title + "\n"
+#     result += "------------------------------" + "\n"
+#     result += "By " + @book.author + "\n"
+#     result += "------------------------------"
+#     return result
+#   end
+# end
+
 
 
 
