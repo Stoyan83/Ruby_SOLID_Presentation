@@ -56,32 +56,32 @@ puts rubber_duck.quack
 
 # 02. Liskov substitution Solution
 
-# class Duck
+class Duck
 
-#     def quack
-#     end
-# end
+  def quack
+  end
+end
 
-# class RubberDuck < Duck
+class RubberDuck < Duck
 
-#     def quack
-#         "Squeek"
-#     end
-# end
+  def quack
+    "Squeek"
+  end
+end
 
-# class RobotDuck < Duck
-#     def quack
-#         'Robotic quacking'
-#     end
+class RobotDuck < Duck
+  def quack
+    Robotic quacking'
+  end
 
-#     def walk
-#         'Robotic walking'
-#     end
+  def walk
+    'Robotic walking'
+    end
 
-#     def fly
-#         'Fly like a robot'
-#     end
-# end
+    def fly
+      'Fly like a robot'
+    end
+end
 
 # rubber_duck = RubberDuck.new
 # puts rubber_duck.quack
