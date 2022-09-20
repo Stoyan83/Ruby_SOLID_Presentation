@@ -13,6 +13,7 @@ class StudenTaxes
 
   def get_discount
     if @average_grade > 5.3
+
       @semester_taxes * 0.7
       # elsif @average_grade > 4.5
       #     @semester_taxes * 0.90
